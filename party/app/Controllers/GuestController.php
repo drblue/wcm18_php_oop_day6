@@ -9,6 +9,14 @@ class GuestController {
 		$this->dbh = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4", DB_USERNAME, DB_PASSWORD);
 	}
 
+	public function getGuest($id) {
+		$query = $this->dbh->prepare("SELECT * FROM guests WHERE id = :id");
+		$query->bindParam(':id', $id);
+		$query->execute();
+
+		return $query->fetchObject('Guest');
+	}
+
 	public function getGuests() {
 		$query = $this->dbh->prepare("SELECT * FROM guests");
 		$query->execute();

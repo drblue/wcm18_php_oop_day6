@@ -11,6 +11,13 @@ require("templates/header.php");
  * - För varje gäst skriva ut gästens namn och ha en länk till en enskild gästs sida
  * - Länk för att anmäla sig till festen
 */
+
+echo "Försöker hämta info om gäst " . $_REQUEST['id'] . "!<br>";
+
+$guestController = new GuestController();
+$guest = $guestController->getGuest($_REQUEST['id']);
+var_dump($guest);
+
 ?>
 
 <h1>Paaaarty!</h1>
