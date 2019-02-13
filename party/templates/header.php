@@ -8,12 +8,12 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 
-	<title>Hello, world!</title>
+	<title><?php echo SITE_TITLE; ?></title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand" href="index.php">Min häftiga fest</a>
+			<a class="navbar-brand" href="index.php"><?php echo SITE_TITLE; ?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
