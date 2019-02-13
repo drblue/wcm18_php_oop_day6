@@ -1,19 +1,17 @@
 <?php
 
 class Vehicle {
-	protected $type = "Vehicle";
 	protected $manufacturer;
 	protected $model;
 	protected $floats = false;
 	protected $wheels = false;
 
-	public function __construct($manufacturer, $model) {
-		$this->manufacturer = $manufacturer;
-		$this->model = $model;
+	public function __construct() {
+		die("A Vehicle can't exist by itself.");
 	}
 
 	public function getType() {
-		return $this->type;
+		return static::$type;
 	}
 
 	public function getManufacturer() {

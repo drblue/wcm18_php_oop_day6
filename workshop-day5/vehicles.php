@@ -9,6 +9,15 @@ $vehicles = [];
 $car = new Car("Tesla", "Model 3");
 array_push($vehicles, $car);
 
+$car = new Car("Nissan", "Qashqai");
+array_push($vehicles, $car);
+
+Car::$type = "Bil";
+
+$car = new Car("Ford", "Escort");
+array_push($vehicles, $car);
+
+
 $boat = new Boat("Bertram", "63");
 array_push($vehicles, $boat);
 
