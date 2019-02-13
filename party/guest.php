@@ -23,7 +23,9 @@ $guest = $guestController->getGuest($_REQUEST['id']);
 	<tbody>
 		<tr>
 			<th>E-post-adress</th>
-			<td><?php echo $guest->getEmail(); ?></td>
+			<td>
+				<a href="mailto:<?php echo $guest->getEmail(); ?>"><?php echo $guest->getEmail(); ?></a>
+			</td>
 		</tr>
 		<tr>
 			<th>Telefonnummer</th>
