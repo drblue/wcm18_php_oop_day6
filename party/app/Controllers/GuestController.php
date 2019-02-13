@@ -13,6 +13,6 @@ class GuestController {
 		$query = $this->dbh->prepare("SELECT * FROM guests");
 		$query->execute();
 
-		return $query->fetchAll();
+		return $query->fetchAll(PDO::FETCH_CLASS, 'Guest');
 	}
 }

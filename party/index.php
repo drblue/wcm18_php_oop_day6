@@ -14,7 +14,6 @@ require("templates/header.php");
 
 $guestController = new GuestController();
 $guests = $guestController->getGuests();
-var_dump($guests);
 
 ?>
 
@@ -22,8 +21,17 @@ var_dump($guests);
 
 <h2>Anmälda gäster</h2>
 <ol>
-	<li><a href="guest.php">Pelle Persson</a></li>
-	<li><a href="guest.php">Bengt Bertilsson</a></li>
+	<?php
+		foreach ($guests as $guest) {
+			?>
+				<li>
+					<a href="guest.php?id=<?php echo $guest->getId(); ?>">
+						<?php echo $guest->getName(); ?>
+					</a>
+				</li>
+			<?php
+		}
+	?>
 </ol>
 
 <a href="signup.php">Anmäl dig till festen</a>
