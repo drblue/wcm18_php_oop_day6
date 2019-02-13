@@ -17,8 +17,6 @@ $guests = $guestController->getGuests();
 
 ?>
 
-<h1>Paaaarty!</h1>
-
 <h2>Anmälda gäster</h2>
 <ol>
 	<?php

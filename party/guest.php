@@ -12,27 +12,22 @@ require("templates/header.php");
  * - Länk för att anmäla sig till festen
 */
 
-echo "Försöker hämta info om gäst " . $_REQUEST['id'] . "!<br>";
-
 $guestController = new GuestController();
 $guest = $guestController->getGuest($_REQUEST['id']);
-var_dump($guest);
 
 ?>
 
-<h1>Paaaarty!</h1>
-
-<h2>Pelle Persson</h2>
+<h2><?php echo $guest->getName(); ?></h2>
 
 <table>
 	<tbody>
 		<tr>
 			<th>E-post-adress</th>
-			<td>pelle@persson.eu</td>
+			<td><?php echo $guest->getEmail(); ?></td>
 		</tr>
 		<tr>
 			<th>Telefonnummer</th>
-			<td>1-555-HELPME</td>
+			<td><?php echo $guest->getPhone(); ?></td>
 		</tr>
 	</tbody>
 </table>

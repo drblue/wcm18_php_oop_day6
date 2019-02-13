@@ -11,8 +11,6 @@ require("templates/header.php");
 */
 ?>
 
-<h1>Paaaarty!</h1>
-
 <h2>Anmäl dig till festen</h2>
 
 <form action="save_signup.php" method="POST">
